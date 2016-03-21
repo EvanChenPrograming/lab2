@@ -24,7 +24,7 @@ int main() {
 		ctbmi.setHeight(a);
 		ctbmi.setWeight(b);
 		if(ctbmi.getBMI()==0)
-			break;
+		break;
 		outfile<<ctbmi.getBMI()<<"\t"<<ctbmi.getStatus()<<endl;
 	}
 
