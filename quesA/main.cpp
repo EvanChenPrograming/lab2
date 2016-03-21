@@ -23,7 +23,9 @@ int main() {
 	while(openfile>>a>>b){
 		ctbmi.setHeight(a);
 		ctbmi.setWeight(b);
-		outfile<<a<<"\t"<<b<<"\t"<<ctbmi.getBMI()<<"\t"<<ctbmi.getStatus()<<endl;
+		if(ctbmi.getBMI()==0)
+			break;
+		outfile<<ctbmi.getBMI()<<"\t"<<ctbmi.getStatus()<<endl;
 	}
 
 	return 0;
