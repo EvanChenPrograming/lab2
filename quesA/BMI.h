@@ -3,11 +3,10 @@ using namespace std;
 class BMI {
 public:
 	BMI();
-	void setHeight(int);
-	void setWeight(int);
+	void setHeight(float);
+	void setWeight(float);
 	float getBMI();
 	string getStatus();
 private:
-	int height, weight;
-	int	bmi;
+	float height, weight, bmi;
 };
