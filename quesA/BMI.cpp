@@ -5,17 +5,17 @@
 		weight=0;
 		bmi=0;	
 	}
-	void BMI:: setHeight(int get){
-		height=get;
+	void BMI:: setHeight(float get){
+		height=get/100;
 	}
-	void BMI:: setWeight(int get){
+	void BMI:: setWeight(float get){
 		weight=get;
 	}
 	float BMI::getBMI(){
 		if(height<=0)
 			bmi=0;
 		else
-			bmi=(weight/height)/height/1000;
+			bmi=(weight/height)/height;
 			return bmi;
 	}
 	string BMI::getStatus(){
