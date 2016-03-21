@@ -6,7 +6,7 @@ int main() {
 	float a,b;	
 	BMI ctbmi;
 
-	string Filename,status;
+	string Filename;
 	cout<<"Enter the file name you want to calculate"<<endl;
 	cin>>Filename;
 
@@ -15,7 +15,7 @@ int main() {
 		cerr << "Failed opening" << endl; 
 		exit(1);
 	}
-	ofstream outfile("BMI_result",ios::app);
+	ofstream outfile("BMI_result.txt",ios::out);
 	if(!outfile){
 		cerr << "Failed opening" << endl; 
 		exit(1);
