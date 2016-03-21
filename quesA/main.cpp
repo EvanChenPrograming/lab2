@@ -1,21 +1,18 @@
 #include <iostream>
 #include "BMI.h"
 #include<fstream>
+#include<iomanip>
+#include<cstdlib>
 using namespace std;
-int main() {
+int main(int argc, const char * argv[]) {
 	float a,b;	
 	BMI ctbmi;
-
-	string Filename;
-	cout<<"Enter the file name you want to calculate"<<endl;
-	cin>>Filename;
-
-	ifstream openfile(Filename,ios::in);
+	ifstream openfile("file.in",ios::in);
 	if(!openfile){
 		cerr << "Failed opening" << endl; 
 		exit(1);
 	}
-	ofstream outfile("BMI_result.txt",ios::out);
+	ofstream outfile("file.out",ios::out);
 	if(!outfile){
 		cerr << "Failed opening" << endl; 
 		exit(1);
@@ -24,8 +21,8 @@ int main() {
 		ctbmi.setHeight(a);
 		ctbmi.setWeight(b);
 		if(ctbmi.getBMI()==0)
-		break;
-		outfile<<ctbmi.getBMI()<<"\t"<<ctbmi.getStatus()<<endl;
+			break;
+		outfile<<fixed<<setprecision(2)<<ctbmi.getBMI()<<"\t"<<ctbmi.getStatus()<<endl;
 	}
 
 	return 0;
