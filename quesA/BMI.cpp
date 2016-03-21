@@ -5,10 +5,10 @@
 		weight=0;
 		bmi=0;	
 	}
-	void BMI:: setHeight(float get){
+	void BMI:: setHeight(int get){
 		height=get;
 	}
-	void BMI:: setWeight(float get){
+	void BMI:: setWeight(int get){
 		weight=get;
 	}
 	float BMI::getBMI(){
