@@ -1,12 +1,12 @@
+#include<string>
 using namespace std;
 class BMI {
 public:
 	BMI();
-	Timer(time_t s);
-	void start();
-	void setStart(time_t ts);
-	time_t getStart();
-	int getElapsedTime();
+	void setHeight(float);
+	void setWeight(float);
+	float getBMI();
+	string getStatus();
 private:
-	float height, weight, BMI;
+	float height, weight, bmi;
 };
