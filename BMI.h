@@ -8,5 +8,5 @@ public:
 	time_t getStart();
 	int getElapsedTime();
 private:
-	
+	float height, weight, BMI;
 };
